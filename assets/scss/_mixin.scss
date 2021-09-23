@@ -1,0 +1,107 @@
+@mixin prefix-name($name, $argument: false) {
+	@if ($argument == false){
+		$argument: $name;
+		$name: border-radius;
+	}
+	-webkit-#{$name}: #{$argument};
+	-ms-#{$name}: #{$argument};
+	-moz-#{$name}: #{$argument};
+	-o-#{$name}: #{$argument};
+	#{$name}: #{$argument};
+}
+@mixin bg($sprite,$argument: 'center center'){
+	background: url("../images/sprite.png#"+ $sprite +"") no-repeat $argument;
+}
+@mixin transition($time: '0.3s'){
+	@include prefix-name(transition, all $time ease);
+}
+@mixin block($block-width: auto, $elem-width: auto, $c: auto, $ib: ib){
+	@if $ib == ib{
+		text-align: center;
+		@if($block-width != auto) {
+			max-width: $block-width;
+			margin: 0 auto;
+		}
+		&>div{
+			display: inline-block;
+			vertical-align: top;
+			@if($elem-width != auto) {
+				width: $elem-width;
+			}
+			@if($c != auto) {
+				margin-right: $c;
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}@else if($ib == per) {
+		max-width: $block-width;
+		margin: 0 auto;
+		&>div{
+			$a: $elem-width * 100 / $block-width;
+			width: $a * 1%;
+			float: left;
+			$a: (100 - $a * $c);
+			$a: $a / ($c - 1);
+			margin-right: $a * 1%;
+			&:nth-child(#{$c}n){
+				margin-right: 0;
+			}
+		}
+		&:after {
+			content: '';
+			clear: both;
+			display: table;
+		}
+	}@else if($ib == fix){
+		$b: $block-width - $elem-width * $c;
+		$a: $b / ($c - 1);
+		max-width: $block-width;
+		margin: 0 auto;
+		& > div {
+			width: $elem-width;
+			margin-right: $a;
+			float: left;
+			&:nth-child(#{$c}n) {
+				margin-right: 0;
+			}
+		}
+		&:after {
+			content: '';
+			clear: both;
+			display: table;
+		}
+	}
+}
+@mixin block-ul($width, $block-width: auto, $margin_right: auto){
+	ul{
+		width: $width;
+		margin: 0 auto;
+		li{
+			float: left;
+			@if ($block-width != auto){
+				width: $block-width;
+			}
+			@if ($margin_right != auto){
+				margin-right: $margin_right;
+				&:last-child{
+					margin-right: 0;
+				}
+			}
+		}
+		&:after {
+			content: '';
+			clear: both;
+			display: table;
+		}
+	}
+}
+
+@mixin flex(){
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;
+}

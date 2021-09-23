@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Tenor Sans';
+  src: url('@/assets/fonts/TenorSans.eot');
+  src: url('@/assets/fonts/TenorSans.eot?#iefix') format('embedded-opentype'),
+  url('@/assets/fonts/TenorSans.woff2') format('woff2'),
+  url('@/assets/fonts/TenorSans.woff') format('woff'),
+  url('@/assets/fonts/TenorSans.ttf') format('truetype') ;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('@/assets/fonts/SourceSansPro-SemiBold.eot');
+  src: url('@/assets/fonts/SourceSansPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('@/assets/fonts/SourceSansPro-SemiBold.woff2') format('woff2'),
+  url('@/assets/fonts/SourceSansPro-SemiBold.woff') format('woff'),
+  url('@/assets/fonts/SourceSansPro-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('@/assets/fonts/SourceSansPro-Regular.eot');
+  src: url('@/assets/fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('@/assets/fonts/SourceSansPro-Regular.woff2') format('woff2'),
+  url('@/assets/fonts/SourceSansPro-Regular.woff') format('woff'),
+  url('@/assets/fonts/SourceSansPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

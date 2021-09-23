@@ -1,0 +1,91 @@
+@import "default";
+//@import "fonts";
+@import "mixin";
+
+body{
+  overflow-x: hidden;
+  background-image: url('@/assets/images/info_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper{
+  max-width: 1130px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.title {
+  font: 400 40px/48px "Tenor Sans";
+  text-align: center;
+  color: #000000;
+}
+
+.description {
+  max-width: 760px;
+  width: 100%;
+  margin: 0 auto;
+  font: 400 20px/28px "Source Sans Pro";
+  text-align: center;
+  color: rgba(28, 22, 19, 0.7);
+}
+
+.btn-video {
+  width: 191px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font: 600 14px/22px "Source Sans Pro";
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #E9D3AA;
+  padding: 14px 20px 14px 45px;
+  background-color: transparent;
+  border: 1px solid rgba(233, 211, 170, 0.4);
+  box-sizing: border-box;
+  position: relative;
+  cursor: pointer;
+  @include transition();
+
+  &:before {
+    content: '';
+    position: absolute;
+    background-image: url('@/assets/images/play_arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 24px;
+    height: 24px;
+    left: 12px;
+    @include transition();
+  }
+
+  &:hover{
+    background-color: rgba(233, 211, 170, 0.2);
+    &:before{
+      background-image: url('@/assets/images/play_arrow-hover.svg');
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+  .description{
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
