@@ -100,6 +100,7 @@ export default {
       width: 100%;
       height: 3px;
       top: 7px;
+      left: 0;
       background-color: #1C1613;
     }
 
@@ -109,6 +110,10 @@ export default {
 
     &:before {
       transform: rotate(45deg);
+    }
+    &:focus,
+    &:hover{
+      background-color: transparent;
     }
   }
 
@@ -209,7 +214,7 @@ export default {
     &__inner {
       display: flex;
       justify-content: space-between;
-      padding: 20px 10px 10px 5px;
+      padding: 20px 5px 10px 5px;
     }
   }
 

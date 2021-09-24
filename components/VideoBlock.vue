@@ -26,9 +26,8 @@ export default {
 
   &-inner {
     display: flex;
-    min-height: 100vh;
-    height: 100vh;
-    max-height: 940px;
+    min-height: 720px;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -47,9 +46,8 @@ export default {
     left: 0;
     z-index: -1;
     width: 100%;
-    min-height: 100vh;
-    height: 100vh;
-    max-height: 940px;
+    min-height: 720px;
+    height: 100%;
 
     &:before {
       content: '';
@@ -64,7 +62,8 @@ export default {
     video {
       width: 100%;
       height: 100%;
-      object-fit: fill;
+      object-fit: cover;
+      //min-height: 720px;
     }
   }
 }
@@ -80,8 +79,6 @@ export default {
   .section_one {
     &-inner {
       min-height: 480px;
-      max-height: 480px;
-
       .title {
         font-size: 34px;
         line-height: 42px;
@@ -91,21 +88,6 @@ export default {
 
     &-video {
       min-height: 480px;
-      max-height: 480px;
-    }
-  }
-}
-@media screen and (max-height: 400px){
-  .section_one {
-    &-inner {
-      min-height: 480px;
-      height: 480px;
-      max-height: 480px;
-    }
-    &-video {
-      min-height: 480px;
-      height: 480px;
-      max-height: 480px;
     }
   }
 }
