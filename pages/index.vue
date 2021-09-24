@@ -30,7 +30,7 @@
         </div>
       </footer>
 
-      <Modal v-show="openVideo" @close="openVideo=false"/>
+      <Modal v-show="openVideo" :video-start="openVideo" @close="openVideo=false"/>
     </div>
 
   </transition>

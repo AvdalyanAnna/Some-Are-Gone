@@ -6,7 +6,7 @@
         <button @click="$emit('click')" class="btn btn-video">Смотреть видео</button>
       </div>
       <div class="section_one-video">
-        <video autoplay muted loop id="myVideo">
+        <video autoplay muted  loop id="myVideo">
           <source src="@/assets/images/header.mp4" type="video/mp4">
         </video>
       </div>

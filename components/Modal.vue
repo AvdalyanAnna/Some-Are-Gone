@@ -11,7 +11,7 @@
 
         <!-- body -->
         <div class="modal-body">
-          <video ref="video" autoplay controls id="myVideo">
+          <video ref="video" controls id="myVideo">
             <source src="@/assets/images/VID-20210922-WA0015.mp4" type="video/mp4">
           </video>
         </div>
@@ -23,10 +23,19 @@
 
 <script>
 export default {
+  data() {
+    return {
+      fullName: 'aaa'
+    }
+  },
   props: {
     title: {
       type: String,
       default: ""
+    },
+    videoStart: {
+      type: Boolean,
+      default: false
     }
   },
   mounted() {
@@ -39,6 +48,15 @@ export default {
     close() {
       this.$refs.video.pause();
       this.$emit('close');
+    }
+  },
+  watch: {
+    videoStart: function (val) {
+      if(val){
+        this.$refs.video.play();
+      }else{
+        this.$refs.video.pause();
+      }
     }
   }
 }
