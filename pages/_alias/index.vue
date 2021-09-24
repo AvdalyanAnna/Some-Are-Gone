@@ -291,6 +291,9 @@ export default {
   .single-product {
     &__img {
       max-height: 444px;
+      img{
+        object-fit: cover;
+      }
     }
 
     &__info {
