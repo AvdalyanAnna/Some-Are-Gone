@@ -75,6 +75,7 @@ export default {
   position: relative;
   max-width: 1100px;
   width: 100%;
+  max-height: 80vh;
   padding: 20px 18px;
   background-image: url('@/assets/images/info_bg.png');
   background-repeat: no-repeat;
@@ -84,6 +85,7 @@ export default {
   border-radius: 8px;
   z-index: 999;
   overflow: hidden;
+
   @media screen and (max-width: 1200px) {
     max-width: 90%;
   }
@@ -114,6 +116,10 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    @media screen and (max-height: 550px) {
+      width: 70vw;
+      height: 70vh;
+    }
   }
 }
 

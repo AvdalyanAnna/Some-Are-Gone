@@ -3,7 +3,7 @@
     <router-link
       v-for="item in products" :key="item.id"
       :to="{ name: 'alias', params: {alias:item.alias }}"
-      class="product">
+      class="product" :id="item.alias" ref="product">
       <div class="product-img">
         <img :src="item.img" :alt="item.title">
       </div>
@@ -39,6 +39,9 @@ export default {
     ...mapGetters({
       products: "getProducts"
     })
+  },
+  mounted() {
+    console.log(this.$refs.product)
   }
 }
 </script>

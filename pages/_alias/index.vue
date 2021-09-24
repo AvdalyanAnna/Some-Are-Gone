@@ -1,57 +1,60 @@
 <template>
-  <div class="single-product">
-    <header class="header">
-      <div class="wrapper">
-        <div class="header__inner">
-          <div class="header-title">
-            Продукция
-          </div>
-          <router-link to="/" class="header-close"></router-link>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <div class="wrapper">
-        <h1 class="single-product__title">{{ product.title }}</h1>
-        <div class="single-product__block">
-          <div class="single-product__img">
-            <img :src="product.gallery" :alt="product.title">
-          </div>
-          <div class="single-product__info">
-            <div class="description">{{ product.description }}</div>
-
-            <ul>
-              <li>
-                <span>Цвет</span>
-                <span>{{ product.color }}</span>
-              </li>
-              <li class="pb-40">
-                <span>Вкус</span>
-                <span>{{ product.taste }}</span>
-              </li>
-              <li>
-                <span>ABV</span>
-                <span>{{ product.ABV }}%</span>
-              </li>
-              <li>
-                <span>CL</span>
-                <span>{{ product.CL }}</span>
-              </li>
-            </ul>
-
+  <transition name="home">
+    <div class="single-product">
+      <header class="header">
+        <div class="wrapper">
+          <div class="header__inner">
+            <div class="header-title">
+              Продукция
+            </div>
+            <button @click="$router.back()" class="header-close"></button>
           </div>
         </div>
-      </div>
-    </main>
+      </header>
 
-  </div>
+      <main>
+        <div class="wrapper">
+          <h1 class="single-product__title">{{ product.title }}</h1>
+          <div class="single-product__block">
+            <div class="single-product__img">
+              <img :src="product.gallery" :alt="product.title">
+            </div>
+            <div class="single-product__info">
+              <div class="description">{{ product.description }}</div>
+
+              <ul>
+                <li>
+                  <span>Цвет</span>
+                  <span>{{ product.color }}</span>
+                </li>
+                <li class="pb-40">
+                  <span>Вкус</span>
+                  <span>{{ product.taste }}</span>
+                </li>
+                <li>
+                  <span>ABV</span>
+                  <span>{{ product.ABV }}%</span>
+                </li>
+                <li>
+                  <span>CL</span>
+                  <span>{{ product.CL }}</span>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+    </div>
+  </transition>
 </template>
 
 <script>
 import {mapGetters} from "vuex";
 
 export default {
+  transition: 'home',
   head() {
     return {
       title: this.product.title,
@@ -87,6 +90,8 @@ export default {
     width: 28px;
     height: 28px;
     cursor: pointer;
+    border: unset;
+    background-color: transparent;
 
     &:after,
     &:before {

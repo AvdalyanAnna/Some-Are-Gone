@@ -1,36 +1,39 @@
 <template>
-  <div>
-    <header class="header">
-      <div class="wrapper">
-        <div class="header__inner">
-          <nuxt-link to="/" class="logo">
-            <img src="@/assets/images/logo.svg" alt="">
-          </nuxt-link>
+  <transition name="home">
+    <div>
+      <header class="header">
+        <div class="wrapper">
+          <div class="header__inner">
+            <nuxt-link to="/" class="logo">
+              <img src="@/assets/images/logo.svg" alt="">
+            </nuxt-link>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <VideoBlock @click="openVideo = true"/>
+      <VideoBlock @click="openVideo = true"/>
 
-    <InfoBlock/>
+      <InfoBlock/>
 
-    <section class="product-block">
-      <div class="wrapper">
-        <div class="title">Продукция</div>
-        <Products></Products>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="wrapper">
-        <div class="footer__inner">
-          <div class="copyright">SomeAreGone, 2021</div>
+      <section class="product-block">
+        <div class="wrapper">
+          <div class="title">Продукция</div>
+          <Products></Products>
         </div>
-      </div>
-    </footer>
+      </section>
 
-    <Modal v-show="openVideo" @close="openVideo=false"/>
-  </div>
+      <footer class="footer">
+        <div class="wrapper">
+          <div class="footer__inner">
+            <div class="copyright">SomeAreGone, 2021</div>
+          </div>
+        </div>
+      </footer>
+
+      <Modal v-show="openVideo" @close="openVideo=false"/>
+    </div>
+
+  </transition>
 </template>
 
 <script>
@@ -50,12 +53,14 @@ export default {
     InfoBlock,
     Modal,
     Products
-  }
+  },
+  transition: 'home'
 }
 
 </script>
 
 <style lang="scss" scoped>
+
 
 .header {
   width: 100%;

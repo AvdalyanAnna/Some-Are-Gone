@@ -26,7 +26,7 @@ export default {
 
   &-inner {
     display: flex;
-    min-height: 720px;
+    min-height: 100vh;
     height: 100vh;
     max-height: 940px;
     flex-direction: column;
@@ -47,7 +47,7 @@ export default {
     left: 0;
     z-index: -1;
     width: 100%;
-    min-height: 720px;
+    min-height: 100vh;
     height: 100vh;
     max-height: 940px;
 
@@ -79,8 +79,8 @@ export default {
 @media screen and (max-width: 550px) {
   .section_one {
     &-inner {
-      min-height: 560px;
-      max-height: 560px;
+      min-height: 480px;
+      max-height: 480px;
 
       .title {
         font-size: 34px;
@@ -90,8 +90,22 @@ export default {
     }
 
     &-video {
-      min-height: 560px;
-      max-height: 560px;
+      min-height: 480px;
+      max-height: 480px;
+    }
+  }
+}
+@media screen and (max-height: 400px){
+  .section_one {
+    &-inner {
+      min-height: 480px;
+      height: 480px;
+      max-height: 480px;
+    }
+    &-video {
+      min-height: 480px;
+      height: 480px;
+      max-height: 480px;
     }
   }
 }
