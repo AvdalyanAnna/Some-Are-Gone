@@ -1,5 +1,4 @@
 <template>
-  <transition name="home" mode="out-in">
     <div class="single-product">
       <header class="header">
         <div class="wrapper">
@@ -47,14 +46,21 @@
       </main>
 
     </div>
-  </transition>
 </template>
 
 <script>
 import {mapGetters} from "vuex";
 
 export default {
-  transition: 'home',
+  transition (to, from) {
+    if(to){
+      if(to.name === "index"){
+        return 'slide-left'
+      }else{
+        return 'slide-right'
+      }
+    }
+  },
   head() {
     return {
       title: this.product.title,

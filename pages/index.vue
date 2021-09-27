@@ -1,5 +1,4 @@
 <template>
-  <transition name="home" mode="out-in">
     <div>
       <header class="header">
         <div class="wrapper">
@@ -32,8 +31,6 @@
 
       <Modal v-show="openVideo" :video-start="openVideo" @close="openVideo=false"/>
     </div>
-
-  </transition>
 </template>
 
 <script>
@@ -54,7 +51,6 @@ export default {
     Modal,
     Products
   },
-  transition: 'home'
 }
 
 </script>
