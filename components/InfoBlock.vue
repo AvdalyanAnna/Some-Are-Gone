@@ -27,6 +27,10 @@ export default {
 
 <style lang="scss" scoped>
 .info {
+  background-image: url('@/assets/images/info_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   padding: 130px 0;
   box-sizing: border-box;
   position: relative;
