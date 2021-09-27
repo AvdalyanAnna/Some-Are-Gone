@@ -12,7 +12,12 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/png', sizes:'36x36', href: '/36.png' },
+      { rel: 'icon', type: 'image/png', sizes:'48x48', href: '/48.png' },
+      { rel: 'icon', type: 'image/png', sizes:'72x72', href: '/72.png' },
+      { rel: 'icon', type: 'image/png', sizes:'96x96', href: '/96.png' },
+      { rel: 'icon', type: 'image/png', sizes:'144x144', href: '/144.png' },
+      { rel: 'icon', type: 'image/png', sizes:'192x192', href: '/192.png' }
     ]
   },
 
