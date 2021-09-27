@@ -18,18 +18,18 @@ export default {
       { rel: 'icon', type: 'image/png', sizes:'96x96', href: '/96.png' },
       { rel: 'icon', type: 'image/png', sizes:'144x144', href: '/144.png' },
       { rel: 'icon', type: 'image/png', sizes:'192x192', href: '/192.png' },
-      { rel: 'prerender', type: 'image/png',  href: '/products/moonshine_elite_vintage.png' },
-      { rel: 'prerender', type: 'image/png',  href: '/products/moonshine_elite_vintage-gallery.png' },
-      { rel: 'prerender', type: 'image/png',  href: '/products/zubrovka.png' },
-      { rel: 'prerender', type: 'image/png',  href: '/products/zubrovka-gallery.png' },
-      { rel: 'prerender', type: 'image/png',  href: '/products/rum.png' },
-      { rel: 'prerender', type: 'image/png',  href: '/products/rum-gallery.png' },
-      { rel: 'prerender', type: 'image/png',  href: '/products/premium_quality_rum.png' },
-      { rel: 'prerender', type: 'image/png',  href: '/products/premium_quality_rum-gallery.png' },
-      { rel: 'prerender', type: 'image/png',  href: '/products/chacha.png' },
-      { rel: 'prerender', type: 'image/png',  href: '/products/chacha-gallery.png' },
-      { rel: 'prerender', type: 'image/png',  href: '/products/gin.png' },
-      { rel: 'prerender', type: 'image/png',  href: '/products/gin-gallery.png' },
+      { rel: 'preload', type: 'image/png',  href: '/products/moonshine_elite_vintage.png' },
+      { rel: 'preload', type: 'image/png',  href: '/products/moonshine_elite_vintage-gallery.png' },
+      { rel: 'preload', type: 'image/png',  href: '/products/zubrovka.png' },
+      { rel: 'preload', type: 'image/png',  href: '/products/zubrovka-gallery.png' },
+      { rel: 'preload', type: 'image/png',  href: '/products/rum.png' },
+      { rel: 'preload', type: 'image/png',  href: '/products/rum-gallery.png' },
+      { rel: 'preload', type: 'image/png',  href: '/products/premium_quality_rum.png' },
+      { rel: 'preload', type: 'image/png',  href: '/products/premium_quality_rum-gallery.png' },
+      { rel: 'preload', type: 'image/png',  href: '/products/chacha.png' },
+      { rel: 'preload', type: 'image/png',  href: '/products/chacha-gallery.png' },
+      { rel: 'preload', type: 'image/png',  href: '/products/gin.png' },
+      { rel: 'preload', type: 'image/png',  href: '/products/gin-gallery.png' },
     ]
   },
 
@@ -59,8 +59,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxtjs/style-resources',
-    // ['@nuxtjs/component-cache', { maxAge: 1000 * 60 * 60 }],
+    '@nuxtjs/style-resources'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
