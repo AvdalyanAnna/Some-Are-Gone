@@ -1,5 +1,5 @@
 <template>
-  <transition name="home">
+  <transition name="home" mode="out-in">
     <div>
       <header class="header">
         <div class="wrapper">

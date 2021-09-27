@@ -1,5 +1,5 @@
 <template>
-  <transition name="home">
+  <transition name="home" mode="out-in">
     <div class="single-product">
       <header class="header">
         <div class="wrapper">
@@ -126,7 +126,10 @@ export default {
 
 .single-product {
   min-height: 100vh;
-
+  background-image: url('@/assets/images/info_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   &__title {
     font: 400 60px/64px "Tenor Sans";
     color: #1C1613;

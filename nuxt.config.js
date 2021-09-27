@@ -17,7 +17,19 @@ export default {
       { rel: 'icon', type: 'image/png', sizes:'72x72', href: '/72.png' },
       { rel: 'icon', type: 'image/png', sizes:'96x96', href: '/96.png' },
       { rel: 'icon', type: 'image/png', sizes:'144x144', href: '/144.png' },
-      { rel: 'icon', type: 'image/png', sizes:'192x192', href: '/192.png' }
+      { rel: 'icon', type: 'image/png', sizes:'192x192', href: '/192.png' },
+      { rel: 'prerender', type: 'image/png',  href: '/products/moonshine_elite_vintage.png' },
+      { rel: 'prerender', type: 'image/png',  href: '/products/moonshine_elite_vintage-gallery.png' },
+      { rel: 'prerender', type: 'image/png',  href: '/products/zubrovka.png' },
+      { rel: 'prerender', type: 'image/png',  href: '/products/zubrovka-gallery.png' },
+      { rel: 'prerender', type: 'image/png',  href: '/products/rum.png' },
+      { rel: 'prerender', type: 'image/png',  href: '/products/rum-gallery.png' },
+      { rel: 'prerender', type: 'image/png',  href: '/products/premium_quality_rum.png' },
+      { rel: 'prerender', type: 'image/png',  href: '/products/premium_quality_rum-gallery.png' },
+      { rel: 'prerender', type: 'image/png',  href: '/products/chacha.png' },
+      { rel: 'prerender', type: 'image/png',  href: '/products/chacha-gallery.png' },
+      { rel: 'prerender', type: 'image/png',  href: '/products/gin.png' },
+      { rel: 'prerender', type: 'image/png',  href: '/products/gin-gallery.png' },
     ]
   },
 
